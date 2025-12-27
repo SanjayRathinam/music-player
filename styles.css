@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffd900ff;
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.music-player {
+    background-color: #8400ffff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 700px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+
+}
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.album-art {
+    width: 250px;  
+    height: 250px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+
+}
+
+.song-details {
+    text-align: center;
+}
+
+.song-title {
+    font-size: 28px; 
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.song-artist {
+    font-size: 20px;
+    color: #ffffffff;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #000000ff;
+    border: none;
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555555ff;
+}
+
+.play:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #1db954;
+}
+
+
+button:focus {
+    outline: none;
+}
+
+.progress {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #3d3b3bff;
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#volume {
+    width: 250px; /* Larger volume slider */
+    margin-top: 20px;
+    background-color: #b15d5dff; /* Dark background for the volume slider */
+}
+
+#volume::-webkit-slider-thumb {
+    background-color: #1db954; /* Green slider thumb */
+}
+
+/* Slider (for volume and progress) color */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px; /* Thicker slider */
+    background: #555; /* Light grey for slider background */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"]:hover {
+    background-color: #444; /* Slightly darker slider background */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #444; /* Darker track for sliders */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: #1db954; /* Green slider thumb */
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+button:active {
+    transform: scale(0.95);
+}
